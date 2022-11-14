@@ -1,1 +1,0 @@
-init.txt , this is test file
