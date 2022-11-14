@@ -1,8 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>A small test task of KraiSoft</title>
-    </head>
-    <body>
-    </body>
+     <head>
+
+          <title> A small test task of KraiSoft </title>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+
+            <style>
+                /* parent DIV */
+                #TestDiv {
+                    position:absolute;
+                    background-color:rgb(163, 163, 175);
+                    top:10%;
+                    left:10%;
+                    height:80%; 
+                    width:80%; 
+                }
+                /* child DIV */
+                #Child_Div {
+                    position:absolute;
+                    background-color: aliceblue;
+                    height:100px;
+                    width:100px;
+                }
+            </style>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#Child_Div').draggable({
+                        cursor:"pointer", // cursor shape
+                        containment:"div", // cannot be dragged outside the parent DIV
+                        // axis:"x",    // This option constrains dragging to either the horizontal (x) or vertical (y) axis. Its possible values are:"x", "y".
+                        // revert:true, // It indicates whether the element is moved back to its original position at the end of the move. By default its value is "false".
+                    });
+                });
+            </script>
+     </head>
+
+     <body>
+        <div id="TestDiv">
+                <div id="Child_Div">
+                    
+                </div>
+        </div>
+     </body>
+
 </html>
